@@ -23,15 +23,17 @@ Architecture
 USGS API
    │
    ▼
-Apache NiFi  ──────────────────────► MinIO (S3-compatible)
-(pulls every 5 mins,                  earthquake/ bucket
- JSON Lines format)                        │
-                                           ▼
-                                    Apache Spark
-                                    ├── Batch Processing (Risk Index)
-                                    ├── Structured Streaming (Live Windows)
-                                    ├── Graph Processing (GraphFrames + PageRank)
-                                    └── ML (KMeans + PCA)
+
+   
+Apache NiFi  ──────────────────────►     MinIO (S3-compatible)
+(pulls every 5 mins,                     earthquake/ bucket
+ JSON Lines format)                              │
+                                                 ▼
+                                           Apache Spark
+                                           ├── Batch Processing (Risk Index)
+                                           ├── Structured Streaming (Live Windows)
+                                           ├── Graph Processing (GraphFrames + PageRank)
+                                           └── ML (KMeans + PCA)
 
 Tech stack
 Apache Spark Apache NiFi MinIO Python PySpark GraphFrames scikit-learn Plotly Pandas Matplotlib
